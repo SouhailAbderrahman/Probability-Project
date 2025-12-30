@@ -32,11 +32,11 @@ java src/SllnSimulation
 ### Task 3: CLT Simulation
 to compile and run the CLT simulation
 
-bash
+```bash
 
 python src/clt_simulation.py
 
-
+```
 ### Task 4: Monte Carlo π Estimation
 To compile and run the Monte carlo simualtion:
 
