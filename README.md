@@ -9,10 +9,9 @@ This project experimentally verifies the Strong Law of Large Numbers (SLLN), the
 * **Name:** Mohammed Ali Chtibi - **ID:** 2311021078
 
 ## Installation
-This project uses standard Java libraries. No external dependencies are required.
-Ensure you have the Java Development Kit (JDK) installed on your system.
 ### Dependencies
-Task 3 requires Python 3.x and the following libraries:
+Java Development Kit (JDK) for task 2.
+Task 3 and 4 requires Python 3.x and the following libraries:
 * **NumPy**: For numerical computations and random number generation.
 * **Matplotlib**: For generating simulation plots and figures.
 Install the dependencies using:
