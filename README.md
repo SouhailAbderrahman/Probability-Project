@@ -10,7 +10,6 @@ This project experimentally verifies the Strong Law of Large Numbers (SLLN), the
 
 ## Installation
 ### Dependencies
-Java Development Kit (JDK) for task 2.
 Task 3 and 4 requires Python 3.x and the following libraries:
 * **NumPy**: For numerical computations and random number generation.
 * **Matplotlib**: For generating simulation plots and figures.
