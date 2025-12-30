@@ -19,3 +19,5 @@ To compile and run the SLLN simulation:
 ```bash
 javac src/SllnSimulation.java
 java src/SllnSimulation
+
+### Task 3: Monte Carlo π Estimation
