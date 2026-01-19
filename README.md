@@ -1,47 +1,56 @@
-# IE 221 Probability - Complete Project Repository (Fall 2024-2025)
+# IE 221 Probability - Teamwork 5: Stress Testing SLLN and CLT
 
-This repository contains the experimental verification of fundamental probability theorems, conducted as part of the IE 221 course. The project transitions from basic simulations to a deep dive into the limits of statistical laws across various distributions.
+This repository contains the final experimental work for the IE 221 Probability course. The project focuses on verifying the limits of the **Strong Law of Large Numbers (SLLN)** and the **Central Limit Theorem (CLT)** by testing them against distributions with finite, infinite, and undefined moments.
 
 ## Team Members
 * **Batuhan Kara** - 2311021051
 * **Souhail Oulad Abderrahman** - 2411013082
 * **Mohamed Elkousy** - 2311021077
-* **Mohammed Ali Chtibi** - 2311021078
+* **Mohamed Ali Chtibi** - 2311021078
 
 ---
 
-## Project Structure
-The repository is organized to ensure all figures and code are easily accessible for grading:
+## Repository Structure
+The project is organized to allow for easy access to code, figures, and analysis:
 
-* 📂 **src/**: Java and Python source files for all tasks.
-* 📂 **results/**: Simulation figures organized by distribution type.
-    * 📁 `Uniform/`, `Exponential/`, `Pareto_3/`, `Pareto_1_5/`, `Cauchy/`
-* 📂 **reports/**: Final comprehensive PDF reports.
-
----
-
-## Detailed Task Overview
-
-### Task 3: Central Limit Theorem (CLT) Analysis
-The objective of Task 3 is to experimentally verify the Central Limit Theorem. 
-* **Methodology:** For different sample sizes ($n=2, 5, 10, 30, 50, 100$), we perform $m=1000$ replications.
-* **Visualization:** The convergence to normality is assessed using:
-    * **Histograms:** To visualize the shape of the standardized sums.
-    * **Normal Q-Q Plots:** To statistically assess how closely the distribution follows a normal curve.
-* **Goal:** To observe how fast different distributions converge to a Normal Distribution as $n$ increases.
-
-### Task 5: Final Phase - Distribution Comparison & Anomalies
-This is the final stage where we test the limits of SLLN and CLT using five distinct distributions:
-1. **Uniform & Exponential**: Baseline distributions where theorems hold perfectly.
-2. **Pareto ($\alpha=3$)**: A heavy-tailed distribution that still satisfies theorem assumptions.
-3. **Pareto ($\alpha=1.5$)**: A critical case where the variance is $\infty$ (infinite), causing the CLT to behave differently.
-4. **Cauchy**: A distribution with undefined mean and variance, where both SLLN and CLT fail to converge.
+* 📂 **src/**: Source code for Java (SLLN simulations) and Python (CLT & Q-Q plot generation).
+* 📂 **results/**: Organized simulation figures (Histograms & Q-Q Plots) for each distribution:
+    * `Uniform/`, `Exponential/`, `Pareto_3/`, `Pareto_1_5/`, `Cauchy/`
+* 📂 **reports/**: Final comprehensive project report in PDF format.
 
 ---
 
-## Installation & Usage
+## Project Overview
 
-### Running the Final Simulation (Task 5)
-```bash
-javac src/Teamwork5Simulation.java
-java src/Teamwork5Simulation
+### 1. SLLN Verification (Task 2)
+Verification of the Strong Law of Large Numbers using cumulative mean plots. We observe how the sample mean converges to the theoretical expected value as $n$ increases to 10,000.
+
+### 2. CLT Analysis (Task 3)
+Verification of the Central Limit Theorem through:
+* **Histograms:** Visualizing the shape of standardized sums for $n = 5, 30, 100$.
+* **Normal Q-Q Plots:** Statistically assessing the normality of the sample mean distributions.
+
+### 3. Final Comparison & Anomalies (Task 5)
+A deep dive into why these theorems fail when theoretical assumptions are violated. We analyze five distinct cases:
+
+| Distribution | $E[X]$ | $Var(X)$ | Theorem Status |
+| :--- | :--- | :--- | :--- |
+| **Uniform(0,1)** | 0.5 | 0.0833 | Success ✅ |
+| **Exponential(1)** | 1.0 | 1.0 | Success ✅ |
+| **Pareto ($\alpha=3$)** | 1.5 | 0.75 | Success ✅ |
+| **Pareto ($\alpha=1.5$)** | 3.0 | $\infty$ | **CLT Fails** ⚠️ |
+| **Cauchy** | Undefined | Undefined | **Both Fail** ❌ |
+
+---
+
+## Key Findings (Anomalies)
+* **Pareto ($\alpha=1.5$):** The SLLN holds because the mean is finite, but the **CLT fails** because the variance is infinite. This results in heavy tails and significant deviations in Q-Q plots.
+* **Cauchy:** This distribution has no defined mean or variance. Consequently, the sample mean never converges, and the distribution never becomes normal, violating both SLLN and CLT.
+
+---
+
+## Submission Checklist
+* [x] Java & Python source code uploaded to `src/`.
+* [x] Histograms and Q-Q Plots organized in `results/`.
+* [x] README cleaned and professionally documented.
+* [ ] Final PDF report uploaded to `reports/`.
