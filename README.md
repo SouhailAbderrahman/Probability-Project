@@ -53,4 +53,4 @@ A deep dive into why these theorems fail when theoretical assumptions are violat
 * [x] Java & Python source code uploaded to `src/`.
 * [x] Histograms and Q-Q Plots organized in `results/`.
 * [x] README cleaned and professionally documented.
-* [ ] Final PDF report uploaded to `reports/`.
+* [X] Final PDF report uploaded to `reports/`.
